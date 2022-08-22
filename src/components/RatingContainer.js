@@ -23,7 +23,7 @@ function RatingContainer(props) {
             ? halfStarIconSrc
             : emptyStarIconSrc
         }
-      ></img>
+      />
     );
   }
 
