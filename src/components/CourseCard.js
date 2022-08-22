@@ -4,10 +4,12 @@ import RatingContainer from "./RatingContainer";
 
 function CourseCard(props) {
   let courseObj = props.courseObject;
-  let bestSeller =
-    courseObj.bestSeller === true ? (
+
+  const BestSeller = () => {
+    return courseObj.bestSeller === true ? (
       <div className={styles["bestseller"]}>Bestseller</div>
     ) : null;
+  };
 
   return (
     <span className={styles["course"]}>
@@ -24,7 +26,7 @@ function CourseCard(props) {
       />
       <h3 className={styles["course-price"]}>{"E£" + courseObj.price}</h3>
       <p className={styles["course-old-price"]}>{"E£" + courseObj.old_price}</p>
-      {bestSeller}
+      <BestSeller />
     </span>
   );
 }
