@@ -3,11 +3,13 @@ import CourseCard from "./CourseCard";
 import styles from "../style_modules/CoursesCardsSectionStyles.module.css";
 
 function CoursesCardsSection(props) {
-  const coursesCardsContainer = props.coursesDataArray.map((courseObj) => {
-    return (
-      <CourseCard key={courseObj.id} courseObject={courseObj}></CourseCard>
-    );
-  });
+  const CoursesCardsContainer = () => {
+    let courses = props.coursesDataArray.map((courseObj) => {
+      return <CourseCard key={courseObj.id} courseObject={courseObj} />;
+    });
+
+    return <div className={styles["courses-container"]}>{courses}</div>;
+  };
 
   return (
     <section className={styles["courses-section"]}>
@@ -21,7 +23,7 @@ function CoursesCardsSection(props) {
           {props.exploreButton}
         </a>
       </article>
-      <div className={styles["courses"]}>{coursesCardsContainer}</div>
+      <CoursesCardsContainer />
     </section>
   );
 }
