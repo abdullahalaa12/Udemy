@@ -4,7 +4,7 @@ import styles from "../style_modules/CoursesCardsSectionStyles.module.css";
 
 function CoursesCardsSection(props) {
   const CoursesCardsContainer = () => {
-    let courses = props.coursesDataArray.map((courseObj) => {
+    const courses = props.coursesDataArray.map((courseObj) => {
       return <CourseCard key={courseObj.id} courseObject={courseObj} />;
     });
 

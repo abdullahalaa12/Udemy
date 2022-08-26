@@ -3,7 +3,7 @@ import styles from "../style_modules/CourseCardStyles.module.css";
 import RatingContainer from "./RatingContainer";
 
 function CourseCard(props) {
-  let courseObj = props.courseObject;
+  const { courseObject: courseObj } = props;
 
   const BestSeller = () => {
     return courseObj.bestSeller === true ? (

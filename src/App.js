@@ -74,7 +74,7 @@ function App() {
         description={description}
         exploreButton={exploreButton}
         coursesDataArray={coursesData}
-      ></CoursesCardsSection>
+      />
     </main>
   );
 }
