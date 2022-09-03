@@ -1,6 +1,11 @@
 import { useEffect, useState } from "react";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
+import NavBar from "./components/NavBar";
 import CoursesCardsSection from "./components/CoursesCardsSection";
+import Footer from "./components/Footer";
+import CoursePage from "./components/CoursePage";
+import PageNotFound from "./components/PageNotFound";
 
 function App() {
   const [coursesData, setCoursesData] = useState(null);
@@ -11,11 +16,25 @@ function App() {
   }, []);
 
   return (
-    <main className="main">
-      {coursesData && (
-        <CoursesCardsSection coursesData={coursesData.courses[0]} />
-      )}
-    </main>
+    <>
+      <NavBar />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            coursesData && (
+              <CoursesCardsSection coursesData={coursesData.courses[0]} />
+            )
+          }
+        />
+        <Route
+          path="/courses/:courseId"
+          element={coursesData && <CoursePage coursesData={coursesData} />}
+        />
+        <Route path="*" element={<PageNotFound />} />
+      </Routes>
+      <Footer />
+    </>
   );
 }
 
