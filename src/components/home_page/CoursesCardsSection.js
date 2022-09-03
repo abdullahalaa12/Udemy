@@ -1,13 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import CourseCard from "./CourseCard";
-import styles from "../../style_modules/CoursesCardsSectionStyles.module.css";
+import styles from "../../style_modules/home_page/CoursesCardsSectionStyles.module.css";
 
 function CoursesCardsSection(props) {
   const { coursesData } = props;
 
   const CoursesCardsContainer = () => {
     const courses = coursesData.items.map((courseObj) => {
-      return <CourseCard key={courseObj.id} courseObject={courseObj} />;
+      return (
+        <Link to={"courses/" + courseObj.id}>
+          <CourseCard key={courseObj.id} courseObject={courseObj} />
+        </Link>
+      );
     });
 
     return <div className={styles["courses-container"]}>{courses}</div>;
