@@ -6,7 +6,7 @@ function CourseCard(props) {
   const { courseObject: courseObj } = props;
 
   const BestSeller = () => {
-    return courseObj.bestSeller === true ? (
+    return courseObj.bestseller_badge_content === true ? (
       <div className={styles["bestseller"]}>Bestseller</div>
     ) : null;
   };
@@ -16,16 +16,18 @@ function CourseCard(props) {
       <img
         className={styles["course-img"]}
         alt="Course"
-        src={courseObj.image}
+        src={courseObj.image_240x135}
       />
       <h3 className={styles["course-name"]}>{courseObj.title}</h3>
-      <p className={styles["course-author"]}>{courseObj.author}</p>
+      <p className={styles["course-author"]}>
+        {courseObj.visible_instructors[0].display_name}
+      </p>
       <RatingContainer
-        rating={courseObj.rating}
-        students={courseObj.students}
+        rating={courseObj.avg_rating.toFixed(1)}
+        students={courseObj.num_reviews}
       />
-      <h3 className={styles["course-price"]}>{"E£" + courseObj.price}</h3>
-      <p className={styles["course-old-price"]}>{"E£" + courseObj.old_price}</p>
+      <h3 className={styles["course-price"]}>{"E£" + 159.99}</h3>
+      <p className={styles["course-old-price"]}>{"E£" + 299.99}</p>
       <BestSeller />
     </span>
   );

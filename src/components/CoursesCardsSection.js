@@ -3,8 +3,10 @@ import CourseCard from "./CourseCard";
 import styles from "../style_modules/CoursesCardsSectionStyles.module.css";
 
 function CoursesCardsSection(props) {
+  const { coursesData } = props;
+
   const CoursesCardsContainer = () => {
-    const courses = props.coursesDataArray.map((courseObj) => {
+    const courses = coursesData.items.map((courseObj) => {
       return <CourseCard key={courseObj.id} courseObject={courseObj} />;
     });
 
@@ -14,13 +16,13 @@ function CoursesCardsSection(props) {
   return (
     <section className={styles["courses-section"]}>
       <article className={styles["courses-tab-exp"]}>
-        <h2 className={styles["courses-tab-title"]}>{props.title}</h2>
-        <p>{props.description}</p>
+        <h2 className={styles["courses-tab-title"]}>{coursesData.header}</h2>
+        <p>{coursesData.description}</p>
         <a
           href="#"
           className={`${styles["white-button"]} ${styles["explore-btn"]}`}
         >
-          {props.exploreButton}
+          {"Explore " + coursesData.title}
         </a>
       </article>
       <CoursesCardsContainer />
