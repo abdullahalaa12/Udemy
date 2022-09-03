@@ -1,0 +1,19 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 480px;
+  max-width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+.heading {
+  margin-bottom: 8px;
+  font-family: "times new roman", serif;
+  font-size: 36px;
+}
+
+.paragraph {
+  margin: 0px;
+  font-size: 20px;
+}
