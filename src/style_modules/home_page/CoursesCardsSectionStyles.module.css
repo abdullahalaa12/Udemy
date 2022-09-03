@@ -1,6 +1,7 @@
 .courses-section {
-  display: inline-block;
+  width: 1275px;
   max-width: 90%;
+  margin: auto;
   padding: 20px;
   border: 1px solid #cccccc;
 }

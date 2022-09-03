@@ -1,6 +1,6 @@
 import React from "react";
 import CourseCard from "./CourseCard";
-import styles from "../style_modules/CoursesCardsSectionStyles.module.css";
+import styles from "../../style_modules/CoursesCardsSectionStyles.module.css";
 
 function CoursesCardsSection(props) {
   const { coursesData } = props;

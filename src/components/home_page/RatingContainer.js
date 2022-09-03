@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../style_modules/RatingContainerStyles.module.css";
+import styles from "../../style_modules/RatingContainerStyles.module.css";
 
 function RatingContainer(props) {
   const StarsIcons = (props) => {

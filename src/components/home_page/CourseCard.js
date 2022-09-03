@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../style_modules/CourseCardStyles.module.css";
+import styles from "../../style_modules/CourseCardStyles.module.css";
 import RatingContainer from "./RatingContainer";
 
 function CourseCard(props) {

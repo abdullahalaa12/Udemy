@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import NavBar from "./components/NavBar";
-import CoursesCardsSection from "./components/CoursesCardsSection";
-import Footer from "./components/Footer";
+import HomePage from "./components/HomePage";
 import CoursePage from "./components/CoursePage";
 import PageNotFound from "./components/PageNotFound";
+import Footer from "./components/Footer";
 
 function App() {
   const [coursesData, setCoursesData] = useState(null);
@@ -21,11 +21,7 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={
-            coursesData && (
-              <CoursesCardsSection coursesData={coursesData.courses[0]} />
-            )
-          }
+          element={coursesData && <HomePage coursesData={coursesData} />}
         />
         <Route
           path="/courses/:courseId"
