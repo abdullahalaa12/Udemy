@@ -4,6 +4,7 @@ import PageNotFound from "./PageNotFound";
 import Header from "./course_page/Header";
 import CourseContent from "./course_page/CourseContent";
 import Reviews from "./course_page/Reviews";
+import styles from "../style_modules/CoursePage.module.css";
 
 function CoursePage(props) {
   const { courseId } = useParams();
@@ -17,7 +18,7 @@ function CoursePage(props) {
 
   return (
     <>
-      {/* <Header
+      <Header
         title={courseObject.title}
         headline={courseObject.headline}
         rating={courseObject.avg_rating}
@@ -28,11 +29,14 @@ function CoursePage(props) {
         language={courseObject.locale}
         caption_languages={courseObject.caption_languages}
         context_info={courseObject.context_info}
-      /> */}
+      />
+      <main className={styles["main-container"]}>
+        <div className={styles["main-content"]}>
+          <CourseContent content={props.content[courseId]} />
 
-      {/* <CourseContent content={props.content[courseId]} /> */}
-
-      <Reviews reviews={props.reviews[courseId]} />
+          <Reviews reviews={props.reviews[courseId]} />
+        </div>
+      </main>
     </>
   );
 }
