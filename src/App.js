@@ -21,11 +21,19 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={coursesData && <HomePage coursesData={coursesData} />}
+          element={coursesData && <HomePage courses={coursesData.courses[0]} />}
         />
         <Route
-          path="/courses/:courseId"
-          element={coursesData && <CoursePage coursesData={coursesData} />}
+          path="/course/:courseId"
+          element={
+            coursesData && (
+              <CoursePage
+                courses={coursesData.courses[0]}
+                content={coursesData.contents}
+                reviews={coursesData.reviews}
+              />
+            )
+          }
         />
         <Route path="*" element={<PageNotFound />} />
       </Routes>

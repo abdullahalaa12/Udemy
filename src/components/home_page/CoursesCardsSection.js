@@ -9,7 +9,7 @@ function CoursesCardsSection(props) {
   const CoursesCardsContainer = () => {
     const courses = coursesData.items.map((courseObj) => {
       return (
-        <Link to={"courses/" + courseObj.id} key={courseObj.id}>
+        <Link to={"course/" + courseObj.id} key={courseObj.id}>
           <CourseCard courseObject={courseObj} />
         </Link>
       );

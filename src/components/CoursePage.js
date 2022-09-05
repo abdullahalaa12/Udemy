@@ -1,15 +1,39 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import PageNotFound from "./PageNotFound";
+import Header from "./course_page/Header";
+import CourseContent from "./course_page/CourseContent";
+import Reviews from "./course_page/Reviews";
 
 function CoursePage(props) {
-  const { coursesData } = props;
   const { courseId } = useParams();
+  const courseObject = props.courses.items.find((x) => x.id == courseId);
+
+  useEffect(() => {
+    document.title = courseObject.title + " | Udemy";
+  }, []);
+
+  if (!courseObject) return <PageNotFound />;
 
   return (
-    <div>
-      {coursesData.contents[courseId]?.details.description ?? <PageNotFound />}
-    </div>
+    <>
+      {/* <Header
+        title={courseObject.title}
+        headline={courseObject.headline}
+        rating={courseObject.avg_rating}
+        num_reviews={courseObject.num_reviews}
+        num_subscribers={courseObject.num_subscribers}
+        instructors={courseObject.visible_instructors}
+        last_update={courseObject.last_update_date}
+        language={courseObject.locale}
+        caption_languages={courseObject.caption_languages}
+        context_info={courseObject.context_info}
+      /> */}
+
+      {/* <CourseContent content={props.content[courseId]} /> */}
+
+      <Reviews reviews={props.reviews[courseId]} />
+    </>
   );
 }
 

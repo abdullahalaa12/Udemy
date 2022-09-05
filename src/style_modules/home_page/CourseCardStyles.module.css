@@ -3,6 +3,11 @@
   width: 235px;
   max-width: 90%;
   margin: 10px;
+  color: black;
+}
+
+.course:hover .course-img {
+  filter: brightness(70%);
 }
 
 .course-img {

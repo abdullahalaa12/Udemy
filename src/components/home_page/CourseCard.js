@@ -6,9 +6,11 @@ function CourseCard(props) {
   const { courseObject: courseObj } = props;
 
   const BestSeller = () => {
-    return courseObj.bestseller_badge_content === true ? (
-      <div className={styles["bestseller"]}>Bestseller</div>
-    ) : null;
+    return (
+      courseObj.bestseller_badge_content && (
+        <div className={styles["bestseller"]}>Bestseller</div>
+      )
+    );
   };
 
   return (
