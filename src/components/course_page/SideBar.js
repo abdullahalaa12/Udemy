@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../../style_modules/course_page/SideBar.module.css";
 import AccessAlarmIcon from "@mui/icons-material/AccessAlarm";
 import OndemandVideoIcon from "@mui/icons-material/OndemandVideo";
@@ -11,8 +11,33 @@ import EmojiEventsOutlinedIcon from "@mui/icons-material/EmojiEventsOutlined";
 function SlideBar(props) {
   const { courseObject } = props;
 
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setScrollPosition(position);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className={styles["sidebar"]}>
+    <div
+      className={`${styles["sidebar"]} ${
+        scrollPosition >= 600 && styles["sidebar-sticky"]
+      }`}
+    >
+      {scrollPosition < 600 && (
+        <img
+          className={styles["course-img"]}
+          alt="Course photo"
+          src={courseObject.image_480x270}
+        />
+      )}
       <div className={styles["buy-container"]}>
         <div className={styles["price-container"]}>
           <h2 className={styles["price"]}>{"E£" + courseObject.price}</h2>

@@ -2,11 +2,15 @@
   display: none;
 }
 
+.course-img {
+  width: 340px;
+}
+
 .buy-container {
   padding: 24px;
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #d1d7dc;
 }
 
 .training-container {
@@ -142,15 +146,23 @@
     display: block;
     width: 340px;
     height: 665px;
-    border: 1px solid black;
+    box-shadow: 0 2px 4px rgb(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
     background-color: white;
 
+    position: absolute;
+    left: 60%;
+    right: auto;
+    top: 304px;
+    bottom: auto;
+
+    margin-left: 60px;
+  }
+
+  .sidebar-sticky {
     position: sticky;
     left: 0;
     right: 0;
     top: 16px;
     bottom: auto;
-
-    margin-left: 60px;
   }
 }
