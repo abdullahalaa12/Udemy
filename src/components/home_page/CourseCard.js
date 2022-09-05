@@ -28,8 +28,8 @@ function CourseCard(props) {
         rating={courseObj.avg_rating.toFixed(1)}
         students={courseObj.num_reviews}
       />
-      <h3 className={styles["course-price"]}>{"E£" + 159.99}</h3>
-      <p className={styles["course-old-price"]}>{"E£" + 299.99}</p>
+      <h3 className={styles["course-price"]}>{"E£" + courseObj.price}</h3>
+      <p className={styles["course-old-price"]}>{"E£" + courseObj.old_price}</p>
       <BestSeller />
     </span>
   );
