@@ -3,8 +3,7 @@
   height: 74px;
   align-items: center;
   box-shadow: 0 8px 4px -4px rgb(200, 200, 200);
-  /* margin-bottom: 2px; */
-  margin-bottom: 50px;
+  margin-bottom: 2px;
 }
 
 .ham-menu {
@@ -22,11 +21,6 @@
   margin-left: auto;
   margin-right: 10px;
 }
-
-/* .nav-links {
-  display: flex;
-  align-items: center;
-} */
 
 .nav-a {
   text-decoration: none;
@@ -113,10 +107,6 @@ input:focus {
 }
 
 @media screen and (min-width: 700px) {
-  /* .nav-links {
-    min-width: 280px;
-  } */
-
   .header-item {
     display: inline;
     height: 36px;
@@ -155,20 +145,12 @@ input:focus {
 }
 
 @media screen and (min-width: 850px) {
-  /* .nav-links {
-    min-width: 400px;
-  } */
-
   .teach-udemy {
     display: flex;
   }
 }
 
 @media screen and (min-width: 1000px) {
-  /* .nav-links {
-    min-width: 550px;
-  } */
-
   .udemy-buss {
     display: flex;
   }
