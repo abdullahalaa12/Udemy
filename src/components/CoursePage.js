@@ -5,6 +5,7 @@ import Header from "./course_page/Header";
 import CourseContent from "./course_page/CourseContent";
 import Reviews from "./course_page/Reviews";
 import styles from "../style_modules/CoursePage.module.css";
+import SideBar from "./course_page/SideBar";
 
 function CoursePage(props) {
   const { courseId } = useParams();
@@ -18,22 +19,12 @@ function CoursePage(props) {
 
   return (
     <>
-      <Header
-        title={courseObject.title}
-        headline={courseObject.headline}
-        rating={courseObject.avg_rating}
-        num_reviews={courseObject.num_reviews}
-        num_subscribers={courseObject.num_subscribers}
-        instructors={courseObject.visible_instructors}
-        last_update={courseObject.last_update_date}
-        language={courseObject.locale}
-        caption_languages={courseObject.caption_languages}
-        context_info={courseObject.context_info}
-      />
+      <Header courseObject={courseObject} />
+
       <main className={styles["main-container"]}>
+        <SideBar courseObject={courseObject} />
         <div className={styles["main-content"]}>
           <CourseContent content={props.content[courseId]} />
-
           <Reviews reviews={props.reviews[courseId]} />
         </div>
       </main>

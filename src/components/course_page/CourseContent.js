@@ -35,8 +35,8 @@ function CourseContent(props) {
       </div>
       <h2>Requirements</h2>
       <ul>
-        {details.Requirements.map((requirement) => (
-          <li>{requirement}</li>
+        {details.Requirements.map((requirement, index) => (
+          <li key={index}>{requirement}</li>
         ))}
       </ul>
       <h2>Description</h2>

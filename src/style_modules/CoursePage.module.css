@@ -1,9 +1,12 @@
 .main-container {
   width: 1200px;
+  max-width: 90%;
   margin: auto;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
 }
 
 .main-content {
   width: 700px;
-  margin-left: 48px;
 }
