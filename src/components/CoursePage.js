@@ -27,8 +27,14 @@ function CoursePage(props) {
         <div className={styles["main-container"]}>
           <SideBar courseObject={courseObject} />
           <div className={styles["main-content"]}>
-            <CourseContent content={props.content[courseId]} />
-            <Feedback reviews={props.reviews[courseId]} />
+            <CourseContent
+              courseObject={courseObject}
+              content={props.content[courseId]}
+            />
+            <Feedback
+              courseObject={courseObject}
+              reviews={props.reviews[courseId]}
+            />
           </div>
         </div>
       </main>

@@ -7,8 +7,8 @@ import ThumbDownIcon from "@mui/icons-material/ThumbDownOutlined";
 
 function Review(props) {
   const [feedback, setFeedback] = useState(0);
+  const { review, query } = props;
 
-  const { review } = props;
   return (
     <div className={styles["review-container"]}>
       <p className={styles["user-initials"]}>{review.user.initials}</p>
