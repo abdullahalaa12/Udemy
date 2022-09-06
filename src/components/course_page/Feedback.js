@@ -6,7 +6,7 @@ function Reviews(props) {
   const { reviews } = props;
 
   return (
-    <div className={styles["container"]}>
+    <div id="reviews" className={styles["container"]}>
       {reviews.results.map((review, index) => (
         <Review key={index} review={review} />
       ))}

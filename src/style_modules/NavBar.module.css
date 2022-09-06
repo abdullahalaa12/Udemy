@@ -3,7 +3,10 @@
   height: 74px;
   align-items: center;
   box-shadow: 0 8px 4px -4px rgb(200, 200, 200);
-  margin-bottom: 2px;
+  background-color: white;
+
+  position: relative;
+  z-index: 3;
 }
 
 .ham-menu {
@@ -136,7 +139,7 @@ input:focus {
     align-items: center;
     border: 1px solid black;
     border-radius: 25px;
-    width: 60%;
+    width: 100%;
   }
 
   .udemy-icon {

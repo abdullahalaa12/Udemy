@@ -28,10 +28,10 @@ function SlideBar(props) {
   return (
     <div
       className={`${styles["sidebar"]} ${
-        scrollPosition >= 600 && styles["sidebar-sticky"]
+        scrollPosition >= 450 && styles["sidebar-sticky"]
       }`}
     >
-      {scrollPosition < 600 && (
+      {scrollPosition < 450 && (
         <img
           className={styles["course-img"]}
           alt="Course photo"

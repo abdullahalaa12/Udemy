@@ -156,6 +156,7 @@
     bottom: auto;
 
     margin-left: 60px;
+    z-index: 1;
   }
 
   .sidebar-sticky {
@@ -165,5 +166,6 @@
     top: 16px;
     bottom: auto;
     height: 665px;
+    z-index: 3;
   }
 }
