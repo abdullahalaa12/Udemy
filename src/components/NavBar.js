@@ -1,7 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import styles from "../style_modules/NavBar.module.css";
 
 function NavBar() {
+  const [searchQuery, setSearchQuery] = useState("");
+  const navigate = useNavigate();
+
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    navigate({
+      pathname: "/",
+      search: `?searchQuery=${searchQuery}`,
+    });
+  };
+
+  const handleChange = (event) => {
+    setSearchQuery(event.target.value);
+  };
+
   return (
     <nav className={styles["navigation-bar"]}>
       <img
@@ -9,18 +25,20 @@ function NavBar() {
         className={styles["ham-menu"]}
         src="https://cdn-icons-png.flaticon.com/512/566/566020.png"
       />
-      <img
-        className={styles["udemy-icon"]}
-        src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg"
-        alt="Udemy"
-      />
+      <Link to="/">
+        <img
+          className={styles["udemy-icon"]}
+          src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg"
+          alt="Udemy"
+        />
+      </Link>
       <a
         href="#"
         className={`${styles["purple-hover"]} ${styles["nav-a"]} ${styles["center"]} ${styles["header-item"]}`}
       >
         Categories
       </a>
-      <form className={styles["search-form"]}>
+      <form onSubmit={handleFormSubmit} className={styles["search-form"]}>
         <button className={styles["search-button"]} type="submit">
           <img
             alt="Search Icon"
@@ -29,12 +47,13 @@ function NavBar() {
           />
         </button>
         <input
+          onChange={handleChange}
+          value={searchQuery}
           className={styles["search-field"]}
           type="text"
           placeholder="Search for anything"
         />
       </form>
-      {/* <div className={styles["nav-links"]}> */}
       <a
         href="#"
         className={`${styles["purple-hover"]} ${styles["nav-a"]} ${styles["center"]} ${styles["header-item"]} ${styles["udemy-buss"]}`}
@@ -79,7 +98,6 @@ function NavBar() {
           className={styles["cart-icon"]}
         />
       </a>
-      {/* </div> */}
     </nav>
   );
 }

@@ -4,10 +4,15 @@ import CourseCard from "./CourseCard";
 import styles from "../../style_modules/home_page/CoursesCardsSectionStyles.module.css";
 
 function CoursesCardsSection(props) {
-  const { coursesData } = props;
+  const { coursesData, searchQuery } = props;
 
   const CoursesCardsContainer = () => {
     const courses = coursesData.items.map((courseObj) => {
+      if (
+        searchQuery &&
+        !courseObj.title.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+        return null;
       return (
         <Link to={"course/" + courseObj.id} key={courseObj.id}>
           <CourseCard courseObject={courseObj} />

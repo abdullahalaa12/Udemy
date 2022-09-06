@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useSearchParams } from "react-router-dom";
 import "./App.css";
 import NavBar from "./components/NavBar";
 import HomePage from "./components/HomePage";
@@ -9,6 +9,8 @@ import Footer from "./components/Footer";
 
 function App() {
   const [coursesData, setCoursesData] = useState(null);
+  const [searchParam] = useSearchParams();
+
   useEffect(() => {
     fetch("http://localhost:3001/data")
       .then((response) => response.json())
@@ -21,7 +23,14 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={coursesData && <HomePage courses={coursesData.courses[0]} />}
+          element={
+            coursesData && (
+              <HomePage
+                searchQuery={searchParam.get("searchQuery")}
+                courses={coursesData.courses[0]}
+              />
+            )
+          }
         />
         <Route
           path="/course/:courseId"
