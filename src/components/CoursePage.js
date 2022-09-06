@@ -12,7 +12,7 @@ function CoursePage(props) {
   const courseObject = props.courses.items.find((x) => x.id == courseId);
 
   useEffect(() => {
-    document.title = courseObject.title + " | Udemy";
+    if (courseObject) document.title = courseObject.title + " | Udemy";
   }, []);
 
   if (!courseObject) return <PageNotFound />;
