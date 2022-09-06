@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import PageNotFound from "./PageNotFound";
 import Header from "./course_page/Header";
 import CourseContent from "./course_page/CourseContent";
-import Reviews from "./course_page/Reviews";
+import Feedback from "./course_page/Feedback";
 import styles from "../style_modules/CoursePage.module.css";
 import SideBar from "./course_page/SideBar";
 
@@ -25,7 +25,7 @@ function CoursePage(props) {
         <SideBar courseObject={courseObject} />
         <div className={styles["main-content"]}>
           <CourseContent content={props.content[courseId]} />
-          <Reviews reviews={props.reviews[courseId]} />
+          <Feedback reviews={props.reviews[courseId]} />
         </div>
       </main>
     </>

@@ -1,6 +1,6 @@
 import React from "react";
 import Review from "./Review";
-import styles from "../../style_modules/course_page/Reviews.module.css";
+import styles from "../../style_modules/course_page/Feedback.module.css";
 
 function Reviews(props) {
   const { reviews } = props;
