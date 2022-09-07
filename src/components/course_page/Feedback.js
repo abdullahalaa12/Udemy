@@ -97,9 +97,9 @@ function Reviews(props) {
             value={inputValue}
             onChange={(event) => setInputValue(event.target.value)}
           />
-          <div className={styles["search-icon"]}>
+          <button type="submit" className={styles["search-icon"]}>
             <SearchIcon sx={{ color: "white" }} />
-          </div>
+          </button>
         </form>
       </div>
       <div className={styles["container"]}>
