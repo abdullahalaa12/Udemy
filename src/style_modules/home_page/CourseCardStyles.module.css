@@ -1,7 +1,6 @@
 .course {
   display: inline-block;
-  width: 235px;
-  max-width: 90%;
+  width: 225px;
   margin: 10px;
   color: black;
 }
