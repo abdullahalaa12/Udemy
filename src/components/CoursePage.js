@@ -16,7 +16,8 @@ function CoursePage(props) {
     if (courseObject) document.title = courseObject.title + " | Udemy";
   }, []);
 
-  if (!courseObject) return <PageNotFound />;
+  if (!(courseObject && props.content[courseId] && props.reviews[courseId]))
+    return <PageNotFound />;
 
   return (
     <>

@@ -43,7 +43,8 @@ function SlideBar(props) {
           <h2 className={styles["price"]}>{"E£" + courseObject.price}</h2>
           <p className={styles["old-price"]}>{"E£" + courseObject.old_price}</p>
           <p className={styles["percent-off"]}>
-            {Math.ceil((courseObject.price / courseObject.old_price) * 100) +
+            {100 -
+              Math.ceil((courseObject.price / courseObject.old_price) * 100) +
               "% off"}
           </p>{" "}
           <p className={styles["days-left"]}>
