@@ -7,6 +7,7 @@ import Feedback from "./course_page/Feedback";
 import styles from "../style_modules/CoursePage.module.css";
 import SideBar from "./course_page/SideBar";
 import CoursePageNav from "./course_page/CoursePageNav";
+import Instructors from "./course_page/Instructors";
 
 function CoursePage(props) {
   const { courseId } = useParams();
@@ -32,6 +33,7 @@ function CoursePage(props) {
               courseObject={courseObject}
               content={props.content[courseId]}
             />
+            <Instructors />
             <Feedback
               courseObject={courseObject}
               reviews={props.reviews[courseId]}
