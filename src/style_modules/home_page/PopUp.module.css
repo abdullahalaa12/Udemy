@@ -1,0 +1,100 @@
+.container {
+  width: 340px;
+  box-shadow: 0 0 0 1px #d1d7dc, 0 2px 4px rgb(0 0 0 / 8%),
+    0 4px 12px rgb(0 0 0 / 8%);
+  background-color: white;
+  padding: 24px;
+  box-sizing: border-box;
+  margin: 0px -10px;
+}
+
+.title {
+  margin: 0px;
+  font-size: 19px;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.title:hover {
+  color: #401b9c;
+}
+
+.updated {
+  color: #1e6055;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.details {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #6a6f73;
+}
+
+.headline {
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.objectives {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0px;
+  font-size: 14px;
+}
+
+.objectives li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 8px;
+}
+
+.objectives span {
+  margin-left: 16px;
+}
+
+.buynow-like {
+  display: flex;
+  margin-top: 8px;
+}
+
+.buynow-btn {
+  color: white;
+  background-color: #a435f0;
+  border: 1px solid #a435f0;
+  width: 100%;
+  margin: 0px 10px 0px 0px;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 14px;
+  cursor: pointer;
+}
+
+.buynow-btn:hover {
+  filter: brightness(90%);
+}
+
+.like-button,
+.like-clicked {
+  cursor: pointer;
+  font-size: 10px;
+  border-radius: 50%;
+  padding: 10px;
+  vertical-align: bottom;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.like-clicked {
+  background-color: black;
+  color: white;
+}

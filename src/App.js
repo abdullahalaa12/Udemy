@@ -24,12 +24,10 @@ function App() {
         <Route
           path="/"
           element={
-            coursesData && (
-              <HomePage
-                searchQuery={searchParam.get("searchQuery")}
-                courses={coursesData.courses[0]}
-              />
-            )
+            <HomePage
+              searchQuery={searchParam.get("searchQuery")}
+              courses={coursesData}
+            />
           }
         />
         <Route
