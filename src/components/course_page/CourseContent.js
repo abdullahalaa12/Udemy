@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import SectionDropDown from "./SectionDropDown";
 import styles from "../../style_modules/course_page/CourseContent.module.css";
 import CheckIcon from "@mui/icons-material/Check";
+import ShowmoreButton from "./ShowmoreButton";
 
 function CourseContent(props) {
   const data = props.content.curriculum_context.data;
@@ -9,11 +10,13 @@ function CourseContent(props) {
   const courseObject = props.courseObject;
 
   const [expandAll, setExpandAll] = useState(false);
+  const [showMore, setShowMore] = useState(false);
 
   const ContentSections = () => {
-    return data.sections.map((section, index) => (
-      <SectionDropDown key={index} expand={expandAll} data={section} />
-    ));
+    return data.sections.map((section, index) => {
+      if (index >= 5 && !showMore) return null;
+      return <SectionDropDown key={index} expand={expandAll} data={section} />;
+    });
   };
 
   const Objectives = () => {
@@ -54,6 +57,12 @@ function CourseContent(props) {
         </div>
         <div>
           <ContentSections />
+          {!showMore && data.sections.length > 5 ? (
+            <ShowmoreButton
+              setShow={setShowMore}
+              content={data.sections.length - 5 + " more sections"}
+            />
+          ) : null}
         </div>
       </section>
       <h2>Requirements</h2>

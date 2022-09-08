@@ -8,6 +8,7 @@ import LinearProgress, {
 } from "@mui/material/LinearProgress";
 import Box from "@mui/material/Box";
 import SearchIcon from "@mui/icons-material/Search";
+import ShowmoreButton from "./ShowmoreButton";
 
 function Reviews(props) {
   const { reviews, courseObject } = props;
@@ -16,6 +17,7 @@ function Reviews(props) {
     reviewsSearchQuery: "",
     rating: 0,
   });
+  const [showMore, setShowMore] = useState(false);
 
   const RatingLinearProgress = styled(LinearProgress)(({ theme }) => ({
     height: 8,
@@ -103,14 +105,22 @@ function Reviews(props) {
         </form>
       </div>
       <div className={styles["container"]}>
-        {reviews.results.map(
-          (review, index) =>
+        {reviews.results.map((review, index) => {
+          if (index >= 5 && !showMore) return null;
+          return (
             review.content
               .toLowerCase()
               .includes(reviewsFilter.reviewsSearchQuery.toLowerCase()) && (
               <Review key={index} review={review} />
             )
-        )}
+          );
+        })}
+        {!showMore && reviews.results.length > 5 ? (
+          <ShowmoreButton
+            setShow={setShowMore}
+            content={reviews.results.length - 5 + " more reviews"}
+          />
+        ) : null}
       </div>
     </section>
   );

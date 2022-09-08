@@ -1,0 +1,17 @@
+.showmore-btn {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  border: 1px solid black;
+  background-color: white;
+  margin-top: 16px;
+  cursor: pointer;
+}
+
+.showmore-btn:hover {
+  background-color: #d1d7dc;
+}
