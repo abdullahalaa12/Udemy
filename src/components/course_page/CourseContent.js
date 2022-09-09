@@ -4,6 +4,12 @@ import styles from "../../style_modules/course_page/CourseContent.module.css";
 import CheckIcon from "@mui/icons-material/Check";
 import ShowmoreButton from "./ShowmoreButton";
 import ShowmoreText from "./ShowmoreText";
+import OndemandVideoIcon from "@mui/icons-material/OndemandVideo";
+import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFileOutlined";
+import SystemUpdateAltIcon from "@mui/icons-material/SystemUpdateAlt";
+import AllInclusiveIcon from "@mui/icons-material/AllInclusive";
+import StayCurrentPortraitIcon from "@mui/icons-material/StayCurrentPortrait";
+import EmojiEventsOutlinedIcon from "@mui/icons-material/EmojiEventsOutlined";
 
 function CourseContent(props) {
   const data = props.content.curriculum_context.data;
@@ -40,6 +46,35 @@ function CourseContent(props) {
         </div>
       </section>
       <section id="curriculum">
+        <p className={styles["includes"]}>This course includes:</p>
+        <ul className={styles["includes-list"]}>
+          <div>
+            <OndemandVideoIcon sx={{ fontSize: 18 }} />
+            <li>{courseObject.content_info_short + " on-demand video"}</li>
+          </div>
+          <div>
+            <InsertDriveFileIcon sx={{ fontSize: 18 }} />
+            <li>{courseObject.articles + " article"}</li>
+          </div>
+          <div>
+            <SystemUpdateAltIcon sx={{ fontSize: 18 }} />
+            <li>
+              {courseObject.downloadable_resources + " downloadable resources"}
+            </li>
+          </div>
+          <div>
+            <AllInclusiveIcon sx={{ fontSize: 18 }} />
+            <li>Full lifetime access</li>
+          </div>
+          <div>
+            <StayCurrentPortraitIcon sx={{ fontSize: 18 }} />
+            <li>Access on mobile and TV</li>
+          </div>
+          <div>
+            <EmojiEventsOutlinedIcon sx={{ fontSize: 18 }} />
+            <li>Certificate of completion</li>
+          </div>
+        </ul>
         <h2>Course content</h2>
         <div className={styles["content-info"]}>
           <p>
