@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 function CourseCard(props) {
   const [displayOnRight, setDisplayOnRight] = useState(true);
   const [displayPopup, setDisplayPopup] = useState(false);
-  const { courseObject: courseObj } = props;
+  const { category, courseObject: courseObj } = props;
   const cardRef = useRef(null);
 
   const BestSeller = () => {
@@ -25,20 +25,18 @@ function CourseCard(props) {
       setDisplayPopup={setDisplayPopup}
       courseObject={props.courseObject}
     >
-      <Link to={"course/" + courseObj.id}>
+      <Link to={`course/${category}/${courseObj.id}`}>
         <span
           ref={cardRef}
           onMouseEnter={() => {
             const remaining =
               window.innerWidth - cardRef.current.getBoundingClientRect().right;
 
-            if (remaining > 360) {
-              setDisplayOnRight(true);
-              setDisplayPopup(true);
-            } else if (cardRef.current.getBoundingClientRect().left > 360) {
+            if (remaining > 360) setDisplayOnRight(true);
+            else if (cardRef.current.getBoundingClientRect().left > 360) {
               setDisplayOnRight(false);
-              setDisplayPopup(true);
-            } else setDisplayPopup(false);
+            } else setDisplayOnRight(null);
+            setDisplayPopup(true);
           }}
           onMouseLeave={() => setDisplayPopup(false)}
           className={styles["course"]}

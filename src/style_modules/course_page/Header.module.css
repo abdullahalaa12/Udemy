@@ -285,4 +285,8 @@
   .options-container {
     display: none;
   }
+
+  .nav-no-students {
+    color: white;
+  }
 }

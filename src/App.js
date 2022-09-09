@@ -31,11 +31,11 @@ function App() {
           }
         />
         <Route
-          path="/course/:courseId"
+          path="/course/:courseCategoryId/:courseId"
           element={
             coursesData && (
               <CoursePage
-                courses={coursesData.courses[0]}
+                courses={coursesData.courses}
                 content={coursesData.contents}
                 reviews={coursesData.reviews}
               />

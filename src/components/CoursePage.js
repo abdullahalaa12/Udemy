@@ -10,8 +10,10 @@ import CoursePageNav from "./course_page/CoursePageNav";
 import Instructors from "./course_page/Instructors";
 
 function CoursePage(props) {
-  const { courseId } = useParams();
-  const courseObject = props.courses.items.find((x) => x.id == courseId);
+  const { courseCategoryId, courseId } = useParams();
+  const courseObject = props.courses[courseCategoryId].items.find(
+    (x) => x.id == courseId
+  );
 
   useEffect(() => {
     if (courseObject) document.title = courseObject.title + " | Udemy";

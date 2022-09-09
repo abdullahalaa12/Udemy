@@ -68,6 +68,40 @@
   margin: 0px;
 }
 
+.arrow-left,
+.arrow-right {
+  position: absolute;
+  top: 20%;
+  color: white;
+  background-color: black;
+  border-radius: 50%;
+  width: 22px;
+  height: 46px;
+  padding: 0px 12px;
+  border: 1px solid #6a6f73;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  z-index: 3;
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+  background-color: #393b3f;
+}
+
+.arrow-right {
+  right: 0px;
+}
+
+.arrow-left {
+  left: 0px;
+}
+
 @media screen and (min-width: 700px) {
   .heading {
     font-size: 32px;

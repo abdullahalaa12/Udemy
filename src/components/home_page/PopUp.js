@@ -45,7 +45,13 @@ function PopUp(props) {
   return (
     <OverlayTrigger
       trigger={["hover", "focus"]}
-      placement={props.displayOnRight ? "right" : "left"}
+      placement={
+        props.displayOnRight == null
+          ? "bottom"
+          : props.displayOnRight
+          ? "right"
+          : "left"
+      }
       show={props.displayPopup}
       overlay={
         <Popover

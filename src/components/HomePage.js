@@ -9,6 +9,7 @@ function HomePage(props) {
   return (
     <main className={styles["main"]}>
       <HomeHeader />
+
       <CoursesSection searchQuery={searchQuery} coursesData={courses} />
     </main>
   );

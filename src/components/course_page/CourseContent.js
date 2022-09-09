@@ -10,6 +10,7 @@ import SystemUpdateAltIcon from "@mui/icons-material/SystemUpdateAlt";
 import AllInclusiveIcon from "@mui/icons-material/AllInclusive";
 import StayCurrentPortraitIcon from "@mui/icons-material/StayCurrentPortrait";
 import EmojiEventsOutlinedIcon from "@mui/icons-material/EmojiEventsOutlined";
+import ReactMarkdown from "react-markdown";
 
 function CourseContent(props) {
   const data = props.content.curriculum_context.data;
@@ -109,9 +110,13 @@ function CourseContent(props) {
       </ul>
       <ShowmoreText>
         <h2>Description</h2>
-        <p>{details.description}</p>
+        <div className={styles["text"]}>
+          <ReactMarkdown>{details.description}</ReactMarkdown>
+        </div>
         <h2>Who this course is for:</h2>
-        <p>{details.for_who}</p>
+        <div className={styles["text"]}>
+          <ReactMarkdown>{details.for_who}</ReactMarkdown>
+        </div>
       </ShowmoreText>
     </div>
   );
