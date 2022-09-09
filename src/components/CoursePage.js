@@ -33,7 +33,7 @@ function CoursePage(props) {
               courseObject={courseObject}
               content={props.content[courseId]}
             />
-            <Instructors />
+            <Instructors instructorsData={courseObject.visible_instructors} />
             <Feedback
               courseObject={courseObject}
               reviews={props.reviews[courseId]}

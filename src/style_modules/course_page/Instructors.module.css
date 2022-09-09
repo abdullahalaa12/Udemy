@@ -1,0 +1,55 @@
+.container {
+  width: 100%;
+  margin-top: 16px;
+}
+
+.name {
+  font-size: 19px;
+  text-decoration: underline;
+  cursor: pointer;
+  color: #5624d0;
+  margin: 0px;
+}
+
+.name:hover {
+  color: #401b9c;
+}
+
+.job {
+  font-size: 16px;
+  color: #6a6f73;
+  margin: 5px 0px 0px;
+}
+
+.img-info {
+  display: flex;
+  align-items: center;
+  margin: 8px 0px 0px;
+}
+
+.img {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+}
+
+.list {
+  list-style: none;
+  padding: 0px;
+  margin: 0px 0px 0px 16px;
+  font-size: 14px;
+}
+
+.list li {
+  display: flex;
+  align-items: center;
+}
+
+.list span {
+  display: inline-block;
+  margin: 4px 0px 4px 16px;
+}
+
+.description {
+  font-size: 14px;
+}
