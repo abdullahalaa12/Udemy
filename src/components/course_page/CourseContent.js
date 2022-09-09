@@ -3,6 +3,7 @@ import SectionDropDown from "./SectionDropDown";
 import styles from "../../style_modules/course_page/CourseContent.module.css";
 import CheckIcon from "@mui/icons-material/Check";
 import ShowmoreButton from "./ShowmoreButton";
+import ShowmoreText from "./ShowmoreText";
 
 function CourseContent(props) {
   const data = props.content.curriculum_context.data;
@@ -71,10 +72,12 @@ function CourseContent(props) {
           <li key={index}>{requirement}</li>
         ))}
       </ul>
-      <h2>Description</h2>
-      <p>{details.description}</p>
-      <h2>Who this course is for:</h2>
-      <p>{details.for_who}</p>
+      <ShowmoreText>
+        <h2>Description</h2>
+        <p>{details.description}</p>
+        <h2>Who this course is for:</h2>
+        <p>{details.for_who}</p>
+      </ShowmoreText>
     </div>
   );
 }
