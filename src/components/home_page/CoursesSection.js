@@ -54,21 +54,14 @@ const CoursesCardsContainer = (props) => {
     )
       return null;
     return (
-      <Carousel.Item>
-        <CourseCard
-          category={category}
-          key={courseObj.id}
-          courseObject={courseObj}
-        />
+      <Carousel.Item key={courseObj.id}>
+        <CourseCard category={category} courseObject={courseObj} />
       </Carousel.Item>
     );
   });
 
   return (
-    <div
-      hidden={props.tabsvalue != category}
-      className={styles["courses-section"]}
-    >
+    <div className={styles["courses-section"]}>
       <article className={styles["courses-tab-exp"]}>
         <h2 className={styles["courses-tab-title"]}>{coursesData.header}</h2>
         <p>{coursesData.description}</p>
@@ -154,15 +147,11 @@ function CoursesSection(props) {
               ))}
             </StyledTabs>
           </Box>
-          {props.coursesData.courses.map((courses, index) => (
-            <CoursesCardsContainer
-              tabsvalue={tabsvalue}
-              category={index}
-              key={index}
-              coursesData={courses}
-              searchQuery={props.searchQuery}
-            />
-          ))}
+          <CoursesCardsContainer
+            category={tabsvalue}
+            coursesData={props.coursesData.courses[tabsvalue]}
+            searchQuery={props.searchQuery}
+          />
         </>
       );
     } else return <LoadingSpinner />;
