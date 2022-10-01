@@ -1,0 +1,292 @@
+.buy-container {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.training-container {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.price-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.price {
+  font-size: 32px;
+  margin: 0;
+}
+
+.old-price {
+  font-size: 18px;
+  color: rgb(94, 94, 94);
+  text-decoration: line-through;
+  margin: 0px 0px 0px 5px;
+}
+
+.percent-off {
+  font-size: 18px;
+  margin: 0px 0px 0px 5px;
+}
+
+.days-left {
+  font-size: 14px;
+  color: rgb(190, 0, 0);
+  margin: 0;
+  padding: 2px;
+
+  display: flex;
+  align-items: center;
+}
+
+.days-left strong {
+  margin-right: 3px;
+}
+
+.sidebar-btn {
+  display: block;
+  background-color: white;
+  border: 1px solid black;
+  width: 100%;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 14px;
+  cursor: pointer;
+}
+
+.sidebar-btn:hover {
+  filter: brightness(90%);
+}
+
+.purple-btn {
+  color: white;
+  background-color: #a435f0;
+  border-color: #a435f0;
+}
+
+.trial-period {
+  text-align: center;
+  width: 100%;
+  font-size: 12px;
+  padding-top: 8px;
+  margin-bottom: 0;
+}
+
+.options-container {
+  display: flex;
+  justify-content: space-around;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  margin: 10px auto 0px;
+  max-width: 600px;
+}
+
+.options-container p {
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.nav-header {
+  display: none;
+}
+
+.nav-shadow-remover {
+  position: absolute;
+  height: 8px;
+  width: 100%;
+  background-color: #1c1d1f;
+  z-index: 6;
+  display: none;
+}
+
+.nav-title {
+  color: white;
+  margin: 0px;
+  font-size: 16px;
+}
+
+.nav-rating-container {
+  margin-top: -8px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-rating {
+  margin-right: 5px;
+  font-weight: bold;
+  color: #f8b146;
+}
+
+.nav-star-icon {
+  width: 12px;
+  height: 12px;
+}
+
+.nav-no-reviews {
+  color: #5624d0;
+  margin-left: 5px;
+}
+
+.nav-no-students {
+  margin-left: 5px;
+}
+
+.header-section {
+  background-color: white;
+  color: black;
+  margin: 0px;
+  padding: 32px 0px;
+  position: relative;
+}
+
+.header-position-manager {
+  width: 1200px;
+  max-width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-container {
+  width: 700px;
+  max-width: 100%;
+}
+
+.context-info {
+  margin: 0px;
+  color: #5624d0;
+  font-size: 14px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+}
+
+.course-img {
+  display: inline;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.header-title {
+  font-size: 24px;
+  margin: 6px 0px;
+}
+
+.header-headline {
+  font-size: 16px;
+  margin: 8px 0px;
+}
+
+.header-createdby {
+  font-size: 14px;
+  margin: -10px 0 10px 0;
+}
+
+.header-lang {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 14px;
+  margin: 0px;
+}
+
+.header-lang div {
+  display: flex;
+  align-items: center;
+  margin: 4px 0px;
+}
+
+.header-lang p {
+  margin: 0px 10px;
+}
+@media screen and (min-width: 1080px) {
+  .nav-header {
+    display: block;
+    background-color: #1c1d1f;
+    width: 100%;
+    height: 45px;
+    padding: 16px 24px;
+
+    position: fixed;
+    top: 0px;
+    z-index: 2;
+  }
+
+  .header-section {
+    background-color: #1c1d1f;
+    color: white;
+  }
+
+  .header-position-manager {
+    align-items: flex-start;
+  }
+
+  .header-container {
+    max-width: 60%;
+  }
+
+  .context-info,
+  .nav-no-reviews {
+    color: #cec0fc;
+    position: static;
+    top: 0px;
+  }
+
+  .buy-btn {
+    display: block;
+    width: 100%;
+  }
+
+  .options-container {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    margin-top: 5px;
+  }
+
+  .nav-shadow-remover {
+    display: block;
+  }
+
+  .header-title {
+    font-size: 32px;
+  }
+
+  .header-headline {
+    font-size: 19px;
+  }
+
+  .header-lang {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .course-img,
+  .buy-container,
+  .sidebar-btn,
+  .trial-period,
+  .options-container {
+    display: none;
+  }
+
+  .nav-no-students {
+    color: white;
+  }
+}

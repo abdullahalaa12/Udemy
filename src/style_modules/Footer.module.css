@@ -1,0 +1,130 @@
+.footer {
+  background-color: #1c1d1f;
+  color: white;
+  margin: 0px;
+}
+
+.footer-upper {
+  padding: 12px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #3e4143;
+}
+
+.promo {
+  font-size: 19px;
+}
+
+.promo a {
+  color: #cec0fc;
+  cursor: pointer;
+}
+
+.promo a:hover {
+  text-decoration: underline;
+}
+
+.logos-container img {
+  margin: 0px 8px;
+}
+
+.footer-lower {
+  padding: 24px 48px 0px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.links-lang {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.links {
+  margin: 0px;
+  list-style: none;
+  padding: 0px;
+  font-size: 14px;
+  order: 1;
+  width: 20%;
+  min-width: 170px;
+}
+
+.links-lang div {
+  width: 40%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.links li {
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.links li:hover {
+  text-decoration: underline;
+}
+
+.udemy-logo {
+  width: 90px;
+}
+
+.logo-copyright {
+  padding: 32px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.logo-copyright p {
+  font-size: 12px;
+}
+
+.lang {
+  background-color: #1c1d1f;
+  color: white;
+  border: 1px solid white;
+  font-size: 16px;
+  width: 140px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+  cursor: pointer;
+}
+
+.lang:hover {
+  background-color: #3e4143;
+}
+
+@media screen and (min-width: 700px) {
+  .footer-lower {
+    padding: 24px 48px;
+  }
+
+  .links-lang {
+    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .links {
+    order: 0;
+  }
+
+  .links-lang div {
+    justify-content: flex-end;
+  }
+
+  .logo-copyright {
+    display: flex;
+    padding: 64px 0px 0px;
+    flex-direction: row;
+    align-items: center;
+  }
+}

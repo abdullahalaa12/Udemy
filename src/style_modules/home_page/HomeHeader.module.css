@@ -1,0 +1,55 @@
+.header {
+  position: relative;
+}
+
+.responsive-img {
+  display: inline;
+  max-width: 100%;
+}
+
+.original-img {
+  display: none;
+}
+
+.offer-container {
+  position: static;
+  width: 100%;
+  padding: 24px;
+  box-sizing: border-box;
+  background-color: white;
+  box-shadow: none;
+}
+
+.offer-container h1 {
+  margin: 0px;
+  font-family: serif;
+  font-size: 24px;
+}
+
+.offer-container p {
+  margin: 10px 0px;
+}
+
+@media screen and (min-width: 700px) {
+  .original-img {
+    display: inline;
+    max-width: 100%;
+  }
+
+  .responsive-img {
+    display: none;
+  }
+
+  .offer-container {
+    position: absolute;
+    width: 40%;
+    max-width: 440px;
+    top: 10%;
+    left: 5%;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
+  }
+
+  .offer-container h1 {
+    font-size: 34px;
+  }
+}

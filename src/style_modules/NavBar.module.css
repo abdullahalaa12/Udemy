@@ -1,0 +1,160 @@
+.navigation-bar {
+  display: flex;
+  height: 74px;
+  align-items: center;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
+  background-color: white;
+
+  position: relative;
+  z-index: 3;
+}
+
+.ham-menu {
+  display: inline;
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  margin-right: auto;
+}
+
+.udemy-icon {
+  display: inline;
+  width: 91px;
+  height: 48px;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.nav-a {
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: smaller;
+  color: black;
+  flex-shrink: 0;
+}
+
+.purple-hover:hover {
+  color: blue;
+}
+
+.search-button {
+  background: none;
+  border: none;
+}
+
+.search-field {
+  background: none;
+  border: none;
+  width: 100%;
+  margin-left: 10px;
+}
+
+.search-icon {
+  height: 20px;
+  width: 20px;
+}
+
+.cart-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.white-button {
+  text-decoration: none;
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  padding-right: 10px;
+  padding-left: 10px;
+  height: 36px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.white-button:hover {
+  background-color: #eeeeee;
+  color: black;
+}
+
+.black-button {
+  text-decoration: none;
+  border: 1px solid black;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.black-button:hover {
+  background-color: rgb(40, 40, 40);
+  color: white;
+}
+.lang-button {
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+input:focus {
+  outline: none;
+}
+.header-item,
+.search-form,
+.center {
+  display: none;
+}
+
+@media screen and (min-width: 700px) {
+  .header-item {
+    display: inline;
+    height: 36px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 14px;
+  }
+
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .udemy-buss,
+  .teach-udemy,
+  .ham-menu {
+    display: none;
+  }
+
+  .search-form {
+    display: flex;
+    height: 48px;
+    justify-content: start;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 25px;
+    width: 100%;
+  }
+
+  .udemy-icon {
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .teach-udemy {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .udemy-buss {
+    display: flex;
+  }
+}
