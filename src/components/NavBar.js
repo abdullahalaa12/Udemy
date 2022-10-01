@@ -25,7 +25,7 @@ function NavBar() {
         className={styles["ham-menu"]}
         src="https://cdn-icons-png.flaticon.com/512/566/566020.png"
       />
-      <Link to="/">
+      <Link to="/Udemy">
         <img
           className={styles["udemy-icon"]}
           src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg"

@@ -86,7 +86,7 @@ function Footer() {
           </div>
         </div>
         <div className={styles["logo-copyright"]}>
-          <Link to="/">
+          <Link to="/Udemy">
             <img
               className={styles["udemy-logo"]}
               alt="Udemy logo"
