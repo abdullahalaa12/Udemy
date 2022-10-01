@@ -1,0 +1,24 @@
+.rating-container {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.rating {
+  display: inline;
+  margin-right: 5px;
+  font-weight: bold;
+  color: rgb(216, 116, 1);
+}
+
+.star-icon {
+  width: 12px;
+  height: 12px;
+  display: inline;
+}
+
+.no-students {
+  color: rgb(94, 94, 94);
+  font-size: smaller;
+  display: inline;
+  margin-left: 5px;
+}
