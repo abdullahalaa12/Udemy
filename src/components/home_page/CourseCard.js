@@ -25,7 +25,7 @@ function CourseCard(props) {
       setDisplayPopup={setDisplayPopup}
       courseObject={props.courseObject}
     >
-      <Link to={`course/${category}/${courseObj.id}`}>
+      <Link to={`/Udemy/course/${category}/${courseObj.id}`}>
         <span
           ref={cardRef}
           onMouseEnter={() => {

@@ -22,7 +22,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route
-          path="/"
+          path="/Udemy"
           element={
             <HomePage
               searchQuery={searchParam.get("searchQuery")}
@@ -31,7 +31,7 @@ function App() {
           }
         />
         <Route
-          path="/course/:courseCategoryId/:courseId"
+          path="/Udemy/course/:courseCategoryId/:courseId"
           element={
             coursesData && (
               <CoursePage
