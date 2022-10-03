@@ -12,7 +12,7 @@ function App() {
   const [searchParam] = useSearchParams();
 
   useEffect(() => {
-    fetch("http://localhost:3001/data")
+    fetch("https://onlinejsonserver.azurewebsites.net/data")
       .then((response) => response.json())
       .then((json) => setCoursesData(json));
   }, []);
